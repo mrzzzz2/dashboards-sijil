@@ -57,38 +57,6 @@ function countByField(data, field) {
   return result;
 }
 
-function renderList(data) {
-
-  const container = document.getElementById("listContent");
-
-  if (!data || data.length === 0) {
-    container.innerHTML = "Tiada data";
-    return;
-  }
-
-  let html = "<table border='1' cellpadding='5' cellspacing='0'>";
-
-  html += `
-    <tr>
-      <th>Nama</th>
-      <th>Kelas</th>
-      <th>Jenis</th>
-      <th>Peringkat</th>
-    </tr>
-  `;
-
-  data.forEach(item => {
-    html += `
-      <tr>
-        <td>${item.nama_pelajar}</td>
-        <td>${item.kelas}</td>
-        <td>${item.jenis_rekod}</td>
-        <td>${item.peringkat}</td>
-      </tr>
-    `;
-  });
-
-  html += "</table>";
 
   container.innerHTML = html;
 }
