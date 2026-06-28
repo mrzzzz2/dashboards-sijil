@@ -55,3 +55,27 @@ function countByField(data, field) {
 
   return result;
 }
+
+function filterByKelas(data, kelas) {
+  return data.filter(item => item.kelas === kelas);
+}
+
+function renderList(list) {
+
+  const container = document.getElementById("listContent");
+
+  if (!list || list.length === 0) {
+    container.innerHTML = "Tiada data";
+    return;
+  }
+
+  let html = "<ul>";
+
+  list.forEach(item => {
+    html += `<li>${item.nama_pelajar} (${item.kelas})</li>`;
+  });
+
+  html += "</ul>";
+
+  container.innerHTML = html;
+}
