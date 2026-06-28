@@ -61,6 +61,4 @@ function countByField(data, field) {
   container.innerHTML = html;
 }
 
-function filterByField(data, field, value) {
-  return data.filter(item => item[field] === value);
-}
+
