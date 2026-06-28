@@ -23,9 +23,6 @@ data:data
 
 }
 
-});
-
-}
 
 let jenisChart;
 
