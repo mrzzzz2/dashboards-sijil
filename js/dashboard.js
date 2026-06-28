@@ -11,11 +11,13 @@ async function initDashboard() {
   drawKelasChart(
     Object.keys(kelas),
     Object.values(kelas)
+
+    const jenis = countByField(data, "jenis_rekod");
+drawJenisChart(Object.keys(jenis), Object.values(jenis));
   );
 }
 
-const jenis = countByField(data, "jenis_rekod");
-drawJenisChart(Object.keys(jenis), Object.values(jenis));
+
 
 initDashboard();
 function countByField(data, field) {
