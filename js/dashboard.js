@@ -24,9 +24,9 @@ function countByField(data, field) {
 
   data.forEach(item => {
 
-    const key = item[field];
+    const key = (item[field] || "").toString().trim();
 
-    if (key !== undefined && key !== null && key !== "") {
+    if (key) {
       result[key] = (result[key] || 0) + 1;
     }
 
