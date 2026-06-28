@@ -14,6 +14,9 @@ async function initDashboard() {
   );
 }
 
+const jenis = countByField(data, "jenis_rekod");
+drawJenisChart(Object.keys(jenis), Object.values(jenis));
+
 initDashboard();
 function countByField(data, field) {
 
