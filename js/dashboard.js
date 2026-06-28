@@ -55,9 +55,3 @@ function countByField(data, field) {
 
   return result;
 }
-
-
-  container.innerHTML = html;
-}
-
-
