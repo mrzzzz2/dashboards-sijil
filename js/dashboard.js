@@ -32,7 +32,6 @@ if (Object.keys(peringkat).length > 0) {
   drawKelasChart(
     Object.keys(kelas),
     Object.values(kelas)
-    data
 
   );
 }
