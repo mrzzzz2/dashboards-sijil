@@ -6,18 +6,33 @@ async function initDashboard() {
 
   document.getElementById("jumlahRekod").innerHTML = data.length;
 
-  // 👉 check kelas
-  const kelasCount = countByField(data, "kelas");
+  // 🧠 1. KELAS
+  const kelas = countByField(data, "kelas");
 
-  console.log("KELAS COUNT:", kelasCount);
+  // 🧠 2. JENIS REKOD
+  const jenis = countByField(data, "jenis_rekod");
 
-  const labels = Object.keys(kelasCount);
-  const values = Object.values(kelasCount);
+  // 🧠 3. PERINGKAT
+  const peringkat = countByField(data, "peringkat");
 
-  drawKelasChart(labels, values);
+  // 📊 KELAS CHART
+  drawKelasChart(
+    Object.keys(kelas),
+    Object.values(kelas)
+  );
+
+  // 📊 JENIS CHART
+  drawJenisChart(
+    Object.keys(jenis),
+    Object.values(jenis)
+  );
+
+  // 📊 PERINGKAT CHART
+  drawPeringkatChart(
+    Object.keys(peringkat),
+    Object.values(peringkat)
+  );
 }
-
-initDashboard();
 function countByField(data, field) {
 
   const result = {};
