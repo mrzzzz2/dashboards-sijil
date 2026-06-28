@@ -18,3 +18,19 @@ async function initDashboard() {
 }
 
 initDashboard();
+function countByField(data, field) {
+
+  const result = {};
+
+  data.forEach(item => {
+
+    const key = item[field];
+
+    if (key !== undefined && key !== null && key !== "") {
+      result[key] = (result[key] || 0) + 1;
+    }
+
+  });
+
+  return result;
+}
