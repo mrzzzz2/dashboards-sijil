@@ -6,6 +6,17 @@ async function initDashboard() {
 
   document.getElementById("jumlahRekod").innerHTML = data.length;
 
+const jenis = countByField(data, "jenis_rekod");
+
+console.log("JENIS:", jenis);
+
+if (Object.keys(jenis).length > 0) {
+  drawJenisChart(
+    Object.keys(jenis),
+    Object.values(jenis)
+  );
+}
+  
   const kelas = countByField(data, "kelas");
 
   drawKelasChart(
