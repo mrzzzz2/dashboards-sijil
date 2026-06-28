@@ -16,10 +16,7 @@ if (Object.keys(jenis).length > 0) {
     Object.values(jenis)
   );
 }
-   const peringkat = countByField(data, "peringkat");
-  drawPeringkatChart(Object.keys(peringkat), Object.values(peringkat));
 
-}
   const kelas = countByField(data, "kelas");
 
   drawKelasChart(
